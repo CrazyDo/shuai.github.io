@@ -3,11 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal academic website for a postdoctoral researcher." />
-  <title>Your Name | Postdoctoral Researcher</title>
+  <meta
+    name="description"
+    content="Menglei Shuai is a postdoctoral researcher at the Broad Institute of MIT and Harvard working on human microbiome, host genetics, multi-omics, bioinformatics, and computational medicine."
+  />
+  <meta name="author" content="Menglei Shuai" />
+  <meta property="og:title" content="Menglei Shuai | Postdoctoral Researcher" />
+  <meta
+    property="og:description"
+    content="Postdoctoral researcher working on human microbiome, host genetics, multi-omics, bioinformatics, and computational medicine."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://crazydo.github.io/shuai.github.io/" />
+  <title>Menglei Shuai | Postdoctoral Researcher</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Menglei Shuai",
+    "jobTitle": "Postdoctoral Researcher",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Broad Institute of MIT and Harvard"
+    },
+    "url": "https://crazydo.github.io/shuai.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=4ceNRuMAAAAJ&hl=en&oi=ao",
+      "https://www.linkedin.com/in/menglei-shuai-145535139",
+      "https://x.com/MengleiS",
+      "https://github.com/CrazyDo"
+    ],
+    "knowsAbout": [
+      "Human microbiome",
+      "Host genetics",
+      "Multi-omics",
+      "Bioinformatics",
+      "Computational medicine",
+      "Gut microbiome",
+      "Metabolomics"
+    ]
+  }
+  </script>
+
   <style>
     :root {
-      --bg: #f7f4ee;
+      --bg: #eef3f0;
       --paper: #fffdf8;
       --ink: #1d1d1f;
       --muted: #6f6a61;
@@ -20,92 +61,613 @@
       --radius: 28px;
       --max: 1120px;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       background:
-        radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 34rem),
-        radial-gradient(circle at 90% 12%, rgba(64, 148, 190, 0.13), transparent 28rem),
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 34rem), 
+        radial-gradient(circle at 90% 12%, rgba(64, 148, 190, 0.13), transparent 28rem), 
         var(--bg);
       color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
+
     a { color: inherit; text-decoration: none; }
     .shell { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
-    header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(20px); background: rgba(247, 244, 238, 0.72); border-bottom: 1px solid var(--line); }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; gap: 24px; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(20px);
+      background: rgba(247, 244, 238, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 24px;
+    }
+
     .brand { font-weight: 760; letter-spacing: -0.04em; font-size: 1.05rem; }
-    .nav-links { display: flex; gap: 18px; align-items: center; font-size: 0.93rem; color: var(--muted); }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
     .nav-links a:hover { color: var(--ink); }
-    .button { display: inline-flex; align-items: center; justify-content: center; padding: 11px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); box-shadow: 0 10px 30px rgba(29, 29, 31, 0.06); font-weight: 650; transition: transform 180ms ease, border-color 180ms ease, background 180ms ease; }
-    .button:hover { transform: translateY(-2px); border-color: rgba(124, 58, 237, 0.28); background: #ffffff; }
-    .hero { padding: 88px 0 42px; }
-    .hero-grid { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: 34px; align-items: stretch; }
-    .hero-card, .side-card, .panel { background: rgba(255, 253, 248, 0.82); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .hero-card { padding: clamp(30px, 5vw, 58px); min-height: 520px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
-    .hero-card::after { content: ""; position: absolute; right: -90px; bottom: -90px; width: 260px; height: 260px; border-radius: 50%; background: linear-gradient(135deg, var(--sage), var(--sky)); opacity: 0.74; }
-    .eyebrow { display: inline-flex; width: fit-content; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; background: var(--accent-soft); color: #5530a6; font-weight: 720; font-size: 0.82rem; letter-spacing: 0.01em; }
-    h1 { margin: 26px 0 18px; font-size: clamp(3.2rem, 8vw, 7.2rem); line-height: 0.88; letter-spacing: -0.085em; max-width: 780px; }
-    .lede { font-size: clamp(1.12rem, 2vw, 1.42rem); color: var(--muted); max-width: 760px; margin: 0; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; position: relative; z-index: 1; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      box-shadow: 0 10px 30px rgba(29, 29, 31, 0.06);
+      font-weight: 650;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(124, 58, 237, 0.28);
+      background: #ffffff;
+    }
+
     .button.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
-    .side-card { padding: 26px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
-    .portrait { aspect-ratio: 1 / 1; border-radius: 24px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), transparent), linear-gradient(45deg, #e8ded0, #f7f4ee 50%, #dfeaf6); border: 1px solid var(--line); display: grid; place-items: center; color: rgba(29, 29, 31, 0.42); text-align: center; padding: 24px; font-weight: 700; }
-    .meta-list { display: grid; gap: 12px; color: var(--muted); font-size: 0.96rem; }
-    .meta-list strong { color: var(--ink); display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+
+    .hero { padding: 88px 0 42px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .hero-card, .side-card, .panel {
+      background: rgba(255, 253, 248, 0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .side-card {
+      position: sticky;
+      top: 90px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .portrait {
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      background:
+        linear-gradient(135deg, rgba(124, 58, 237, 0.18), transparent),
+        linear-gradient(45deg, #e8ded0, #f7f4ee 50%, #dfeaf6);
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      color: rgba(29, 29, 31, 0.42);
+      text-align: center;
+      padding: 24px;
+      font-weight: 700;
+    }
+
+    .profile-name { margin: 0; font-size: 1.5rem; line-height: 1; letter-spacing: -0.045em; }
+    .profile-title { margin: 6px 0 0; color: var(--muted); }
+
+    .contact-nav { display: grid; gap: 9px; padding-top: 4px; }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.45);
+      color: var(--ink);
+      font-weight: 680;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .contact-link:hover {
+      transform: translateX(3px);
+      border-color: rgba(124, 58, 237, 0.28);
+      background: #fff;
+    }
+
+    .contact-link span:last-child { color: var(--muted); font-weight: 700; }
+
+    .latest-panel {
+      margin-top: 34px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.52);
+      display: grid;
+      gap: 10px;
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .latest-panel h3 {
+      margin: 0;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+    }
+
+    .latest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .mini-news {
+      display: grid;
+      gap: 2px;
+      padding: 0 12px 0 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .mini-news:last-child { border-right: 0; padding-right: 0; }
+
+    .mini-news time {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .mini-news span {
+      color: var(--ink);
+      font-size: 0.92rem;
+      line-height: 1.38;
+      font-weight: 620;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .meta-list strong {
+      color: var(--ink);
+      display: block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+
+    .hero-card {
+      padding: clamp(30px, 5vw, 58px);
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sage), var(--sky));
+      opacity: 0.74;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #5530a6;
+      font-weight: 720;
+      font-size: 0.82rem;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      margin: 26px 0 18px;
+      font-size: clamp(3.2rem, 8vw, 7.2rem);
+      line-height: 0.88;
+      letter-spacing: -0.085em;
+      max-width: 780px;
+    }
+
+    .lede {
+      font-size: clamp(1.12rem, 2vw, 1.42rem);
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+      position: relative;
+      z-index: 1;
+    }
+
     section { padding: 54px 0; }
-    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 22px; margin-bottom: 22px; }
-    h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 0.96; letter-spacing: -0.06em; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+    }
+
     .section-note { color: var(--muted); max-width: 420px; margin: 0; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .panel { padding: 24px; box-shadow: 0 16px 42px rgba(42, 35, 24, 0.08); }
-    .panel h3 { margin: 0 0 10px; font-size: 1.15rem; letter-spacing: -0.025em; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .panel {
+      padding: 24px;
+      box-shadow: 0 16px 42px rgba(42, 35, 24, 0.08);
+    }
+
+    .panel h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      letter-spacing: -0.025em;
+    }
+
     .panel p { margin: 0; color: var(--muted); }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-    .tag { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: rgba(255,255,255,0.55); font-size: 0.82rem; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.55);
+      font-size: 0.82rem;
+    }
+
     .publications { display: grid; gap: 12px; }
-    .pub { padding: 20px; border-radius: 22px; background: rgba(255, 253, 248, 0.78); border: 1px solid var(--line); display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; }
-    .year { width: 64px; height: 64px; border-radius: 18px; background: var(--accent-soft); color: #5530a6; display: grid; place-items: center; font-weight: 800; }
+
+    .pub {
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(255, 253, 248, 0.78);
+      border: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .year {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: var(--accent-soft);
+      color: #5530a6;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+    }
+
     .pub h3 { margin: 0 0 6px; letter-spacing: -0.025em; }
     .pub p { margin: 0; color: var(--muted); }
+
     .news-list { display: grid; gap: 10px; }
-    .news-item { display: grid; grid-template-columns: 120px 1fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); }
-    .news-date { color: var(--muted); font-variant-numeric: tabular-nums; }
-    footer { padding: 46px 0 70px; color: var(--muted); }
-    .footer-card { border-top: 1px solid var(--line); padding-top: 24px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-    .links { display: flex; flex-wrap: wrap; gap: 14px; color: var(--ink); font-weight: 650; }
-    @media (max-width: 860px) { .hero-grid, .grid-3 { grid-template-columns: 1fr; } .hero-card { min-height: auto; } .nav-links { display: none; } .section-head { display: grid; } .news-item { grid-template-columns: 1fr; gap: 2px; } }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .news-date {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    footer { padding: 34px 0 70px; color: var(--muted); }
+
+    .footer-card {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: var(--ink);
+      font-weight: 650;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid, .grid-3 { grid-template-columns: 1fr; }
+      .side-card { position: static; order: 2; }
+      .hero-card { min-height: auto; order: 1; }
+      .nav-links { display: none; }
+      .section-head { display: grid; }
+      .latest-grid { grid-template-columns: 1fr; }
+      .mini-news { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 10px; }
+      .mini-news:last-child { border-bottom: 0; padding-bottom: 0; }
+      .news-item { grid-template-columns: 1fr; gap: 2px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <nav class="shell">
-      <a href="#top" class="brand">Your Name</a>
+      <a href="#top" class="brand">Menglei Shuai</a>
       <div class="nav-links" aria-label="Main navigation">
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#projects">Projects</a>
         <a href="#news">News</a>
-        <a href="#contact" class="button">Contact</a>
       </div>
     </nav>
   </header>
+
   <main id="top">
     <section class="hero shell">
       <div class="hero-grid">
-        <div class="hero-card"><div><span class="eyebrow">Postdoctoral researcher · computational biology · translational science</span><h1>Your Name</h1><p class="lede">I study how biological systems change across molecular, cellular, and clinical scales, with a focus on building interpretable tools that turn complex data into testable biological hypotheses.</p><div class="hero-actions"><a class="button primary" href="assets/cv.pdf">Download CV</a><a class="button" href="#publications">Selected papers</a><a class="button" href="#projects">Tools & code</a></div></div></div>
-        <aside class="side-card" aria-label="Profile summary"><div class="portrait">Replace this block with your photo<br />or keep it as a clean graphic.</div><div class="meta-list"><div><strong>Current role</strong>Postdoctoral Researcher, Your Institution</div><div><strong>Research home</strong>Multi-omics · microbiome · machine learning · disease biology</div><div><strong>Open to</strong>Faculty searches, collaborations, talks, and trainees interested in data-rich biology</div></div></aside>
+        <aside class="side-card" aria-label="Profile and contact links">
+          <div class="portrait">
+            Add your photo here<br />or keep this quiet abstract card.
+          </div>
+
+          <div>
+            <h2 class="profile-name">Menglei Shuai</h2>
+            <p class="profile-title">Postdoctoral Researcher, Broad Institute of MIT and Harvard</p>
+          </div>
+
+          <div class="contact-nav" aria-label="Contact and academic links">
+            <a class="contact-link" href="mailto:your.email@example.com"><span>Email</span><span>↗</span></a>
+            <a class="contact-link" href="assets/cv.pdf"><span>CV</span><span>↗</span></a>
+            <a class="contact-link" href="https://scholar.google.com/citations?user=4ceNRuMAAAAJ&hl=en&oi=ao"><span>Google Scholar</span><span>↗</span></a>
+            <a class="contact-link" href="https://github.com/CrazyDo"><span>GitHub</span><span>↗</span></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/menglei-shuai-145535139"><span>LinkedIn</span><span>↗</span></a>
+            <a class="contact-link" href="https://x.com/MengleiS"><span>X / Twitter</span><span>↗</span></a>
+          </div>
+
+
+          <div class="meta-list">
+            <div><strong>Research home</strong>Human microbiome · host genetics · multi-omics · bioinformatics · computational medicine</div>
+            <div><strong>Open to</strong>Collaborations, talks, faculty searches, and trainees interested in data-rich biology</div>
+          </div>
+        </aside>
+
+        <div class="hero-card">
+          <div>
+            <span class="eyebrow">Postdoctoral researcher · human microbiome · computational medicine</span>
+            <h1>Menglei Shuai</h1>
+            <p class="lede">
+              I study how the human microbiome, host genetics, metabolism, and disease phenotypes connect across biological scales, using multi-omics data and computational approaches to generate testable hypotheses for translational medicine.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#research">Research vision</a>
+              <a class="button" href="#publications">Selected papers</a>
+              <a class="button" href="#projects">Tools & code</a>
+            </div>
+            <div class="latest-panel" aria-label="Latest updates">
+              <h3>Latest</h3>
+              <div class="latest-grid">
+                <a class="mini-news" href="#news"><time>2025</time><span>Featured in Westlake University’s postdoctoral report.</span></a>
+                <a class="mini-news" href="#publications"><time>2024</time><span>Continued work on gut mycobiome dynamics and host metabolism.</span></a>
+                <a class="mini-news" href="#projects"><time>Ongoing</time><span>Building reproducible tools for microbiome and multi-omics discovery.</span></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
-    <section id="research" class="shell"><div class="section-head"><h2>Research vision</h2><p class="section-note">A compact version of your future independent program. Make this section sound like where you are going, not only where you have been.</p></div><div class="grid-3"><article class="panel"><h3>1. Biological systems as dynamic ecosystems</h3><p>Understanding how host, microbial, immune, and metabolic states interact over time, and how those interactions shape disease risk and therapeutic response.</p><div class="tag-row"><span class="tag">microbiome</span><span class="tag">metabolomics</span><span class="tag">longitudinal data</span></div></article><article class="panel"><h3>2. Data-driven discovery with guardrails</h3><p>Developing computational frameworks that combine machine learning with biological priors, statistical discipline, and experimental interpretability.</p><div class="tag-row"><span class="tag">machine learning</span><span class="tag">causal inference</span><span class="tag">biomarkers</span></div></article><article class="panel"><h3>3. Translational atlases and reusable tools</h3><p>Building resources that help researchers move from large-scale measurements to mechanisms, stratification, and actionable hypotheses.</p><div class="tag-row"><span class="tag">open science</span><span class="tag">atlases</span><span class="tag">reproducible code</span></div></article></div></section>
-    <section id="publications" class="shell"><div class="section-head"><h2>Selected publications</h2><p class="section-note">Keep 3–6 representative papers here. Link the full list to Google Scholar or PubMed.</p></div><div class="publications"><article class="pub"><div class="year">2026</div><div><h3>Paper title goes here: a concise description of the main contribution</h3><p><strong>Your Name</strong>, Coauthor A, Coauthor B. <em>Journal Name</em>. <a href="#">DOI</a> · <a href="#">Code</a></p></div></article><article class="pub"><div class="year">2025</div><div><h3>Paper title goes here: multi-omics signatures across disease states</h3><p><strong>Your Name</strong>, Coauthor A, Coauthor B. <em>Journal Name</em>. <a href="#">DOI</a> · <a href="#">Data</a></p></div></article><article class="pub"><div class="year">2024</div><div><h3>Paper title goes here: interpretable modeling for biological discovery</h3><p>Coauthor A, <strong>Your Name</strong>, Coauthor B. <em>Journal Name</em>. <a href="#">DOI</a></p></div></article></div></section>
-    <section id="projects" class="shell"><div class="section-head"><h2>Projects & resources</h2><p class="section-note">This is where you can show the “research product” side of your identity: code, datasets, analyses, dashboards, and protocols.</p></div><div class="grid-3"><article class="panel"><h3>OpenAlex trend explorer</h3><p>A lightweight tool for tracking publication growth, citation momentum, and emerging opportunities across research keywords.</p><div class="tag-row"><a class="tag" href="#">GitHub</a><a class="tag" href="#">Demo</a></div></article><article class="panel"><h3>Multi-omics analysis templates</h3><p>Reusable workflows for integrating microbiome, metabolomics, transcriptomics, and clinical metadata.</p><div class="tag-row"><a class="tag" href="#">Code</a><a class="tag" href="#">Documentation</a></div></article><article class="panel"><h3>Research notes</h3><p>Short essays on methods, emerging fields, reproducibility, and the craft of computational biology.</p><div class="tag-row"><a class="tag" href="#">Read notes</a></div></article></div></section>
-    <section id="news" class="shell"><div class="section-head"><h2>News</h2><p class="section-note">Three to five recent updates are enough. Keep it alive, not noisy.</p></div><div class="news-list"><div class="news-item"><div class="news-date">May 2026</div><div>Launched this website as a home for my research program, publications, and open tools.</div></div><div class="news-item"><div class="news-date">Apr 2026</div><div>Released an updated citation-momentum analysis script for tracking emerging research areas.</div></div><div class="news-item"><div class="news-date">2025</div><div>Presented recent work on multi-scale biological data integration. Add conference or seminar details here.</div></div></div></section>
-    <section id="contact" class="shell"><div class="panel"><h2>Contact</h2><p class="section-note" style="margin-top: 12px; max-width: 760px;">I am interested in collaborations at the intersection of computational biology, microbiome science, multi-omics, and translational disease research.</p><div class="hero-actions"><a class="button primary" href="mailto:your.email@example.com">Email me</a><a class="button" href="#">Google Scholar</a><a class="button" href="#">GitHub</a><a class="button" href="#">ORCID</a><a class="button" href="#">LinkedIn</a></div></div></section>
+
+    <section id="research" class="shell">
+      <div class="section-head">
+        <h2>Research vision</h2>
+        <p class="section-note">My work sits at the interface of human microbiome science, multi-omics integration, host genetics, and computational medicine.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="panel">
+          <h3>1. Human microbiome as a disease-linked ecosystem</h3>
+          <p>Characterizing how bacterial, fungal, metabolic, and host factors vary across populations and connect to cardiometabolic, cognitive, and immune-related traits.</p>
+          <div class="tag-row">
+            <span class="tag">gut microbiome</span>
+            <span class="tag">gut mycobiome</span>
+            <span class="tag">population cohorts</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>2. Multi-omics maps of host-microbe biology</h3>
+          <p>Integrating metagenomics, metabolomics, host genetics, and clinical phenotypes to identify interpretable patterns and biologically grounded hypotheses.</p>
+          <div class="tag-row">
+            <span class="tag">multi-omics</span>
+            <span class="tag">metabolomics</span>
+            <span class="tag">host genetics</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>3. Computational medicine with reusable tools</h3>
+          <p>Building analysis workflows and open resources that help translate high-dimensional microbiome data into mechanisms, biomarkers, and therapeutic opportunities.</p>
+          <div class="tag-row">
+            <span class="tag">bioinformatics</span>
+            <span class="tag">machine learning</span>
+            <span class="tag">open science</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="shell">
+      <div class="section-head">
+        <h2>Selected publications</h2>
+        <p class="section-note">A short, curated list. The full publication record lives on Google Scholar.</p>
+      </div>
+
+      <div class="publications">
+        <article class="pub">
+          <div class="year">2024</div>
+          <div>
+            <h3>Landscape of the gut mycobiome dynamics during pregnancy and its relationship with host metabolism and pregnancy health</h3>
+            <p>Yuanqing Fu, Wanglong Gou, <strong>Menglei Shuai</strong>, and colleagues. <em>Gut</em>. <a href="https://gut.bmj.com/content/73/8/1302">Article</a></p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="year">2023</div>
+          <div>
+            <h3>Comparison of fecal and blood metabolome reveals inconsistent associations of the gut microbiota with cardiometabolic diseases</h3>
+            <p>Kui Deng, Jin-jian Xu, Luqi Shen, and colleagues including <strong>Menglei Shuai</strong>. <em>Nature Communications</em>. <a href="https://www.nature.com/articles/s41467-023-36256-y">Article</a></p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="year">2022</div>
+          <div>
+            <h3>Mapping the human gut mycobiome in middle-aged and elderly adults: multi-omics insights and implications for host metabolic health</h3>
+            <p><strong>Menglei Shuai</strong>, Yuanqing Fu, Hai-li Zhong, and colleagues. <em>Gut</em>. <a href="https://gut.bmj.com/content/71/9/1812">Article</a></p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <div class="year">2021</div>
+          <div>
+            <h3>Multi-omics analyses reveal relationships among dairy consumption, gut microbiota and cardiometabolic health</h3>
+            <p><strong>Menglei Shuai</strong>, Zelei Miao, Wanglong Gou, and colleagues. <a href="https://pubmed.ncbi.nlm.nih.gov/33752125/">PubMed</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="shell">
+      <div class="section-head">
+        <h2>Projects & resources</h2>
+        <p class="section-note">A place for code, reproducible analyses, datasets, and small tools that make the research easier to reuse.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="panel">
+          <h3>Microbiome & multi-omics workflows</h3>
+          <p>Reusable templates for integrating metagenomics, metabolomics, host genetics, and phenotype data in human cohort studies.</p>
+          <div class="tag-row">
+            <a class="tag" href="https://github.com/CrazyDo">GitHub</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>OpenAlex trend explorer</h3>
+          <p>A lightweight tool for tracking publication growth, citation momentum, and emerging opportunities across research keywords.</p>
+          <div class="tag-row">
+            <a class="tag" href="https://github.com/CrazyDo">Code</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Research notes</h3>
+          <p>Short notes on microbiome science, multi-omics integration, reproducible bioinformatics, and computational medicine.</p>
+          <div class="tag-row">
+            <a class="tag" href="#">Coming soon</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="news" class="shell">
+      <div class="section-head">
+        <h2>News</h2>
+        <p class="section-note">A few updates are enough. Keep this section alive, but never noisy.</p>
+      </div>
+
+      <div class="news-list">
+        <div class="news-item">
+          <div class="news-date">2025</div>
+          <div>Featured in Westlake University’s first postdoctoral report, highlighting research in bioinformatics at the Broad Institute of MIT and Harvard.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2024</div>
+          <div>Published collaborative work on gut mycobiome dynamics during pregnancy and links with host metabolism and pregnancy health.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2023</div>
+          <div>Contributed to a Nature Communications study comparing fecal and blood metabolomic associations with gut microbiota and cardiometabolic diseases.</div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="shell"><div class="footer-card"><div>© <span id="year"></span> Your Name. Built as a small, sturdy academic vessel.</div><div class="links"><a href="#top">Top</a><a href="assets/cv.pdf">CV</a><a href="mailto:your.email@example.com">Email</a></div></div></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <footer class="shell">
+    <div class="footer-card">
+      <div>© <span id="year"></span> Menglei Shuai. Built as a small, sturdy academic vessel.</div>
+      <div class="links">
+        <a href="#top">Top</a>
+        <a href="assets/cv.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?user=4ceNRuMAAAAJ&hl=en&oi=ao">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
